@@ -3,7 +3,7 @@ import cv2
 import json
 import matplotlib.pyplot as plt
 from PIL import ImageDraw
-
+### 显示各个类别在图中的位置分布
 from PIL import Image
 crop_image_path='/media/wrc/0EB90E450EB90E45/data/比赛/vis_category'
 IMAGE_SAVE_PATH='/media/wrc/0EB90E450EB90E45/data/比赛'

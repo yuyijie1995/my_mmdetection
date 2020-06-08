@@ -2,6 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31d0cb77-d2e7-41f7-a4ce-490808dbd1af" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/my_mmdetection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_mmdetection.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_annlyze/data_analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_annlyze/data_analyze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_annlyze/data_analyze_xml.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_annlyze/data_analyze_xml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_annlyze/data_distribute_analyze.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_annlyze/data_distribute_analyze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_annlyze/data_vis.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_annlyze/data_vis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_annlyze/img_compare.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_annlyze/img_compare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_annlyze/inspect_res.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_annlyze/inspect_res.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_annlyze/test_.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mmdetection/mmdet/datasets/pipelines/transforms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdetection/mmdet/datasets/pipelines/transforms.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,13 +25,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mmdetection/mmdet/datasets/pipelines/transforms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34925">
-              <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            <state relative-caret-position="500">
+              <caret line="2060" lean-forward="true" selection-start-line="2060" selection-end-line="2060" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_annlyze/data_analyze.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_annlyze/data_analyze_xml.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-896">
+              <caret column="11" selection-start-column="11" selection-end-column="11" />
+              <folding>
+                <element signature="e#18#52#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_annlyze/data_distribute_analyze.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_annlyze/data_vis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_annlyze/img_compare.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data_annlyze/inspect_res.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -33,6 +112,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/mmdetection/mmdet/datasets/pipelines/transforms.py" />
+        <option value="$PROJECT_DIR$/data_annlyze/data_analyze.py" />
+        <option value="$PROJECT_DIR$/data_annlyze/data_analyze_xml.py" />
+        <option value="$PROJECT_DIR$/data_annlyze/data_distribute_analyze.py" />
+        <option value="$PROJECT_DIR$/data_annlyze/data_vis.py" />
+        <option value="$PROJECT_DIR$/data_annlyze/img_compare.py" />
+        <option value="$PROJECT_DIR$/data_annlyze/inspect_res.py" />
       </list>
     </option>
   </component>
@@ -59,32 +144,6 @@
               <item name="my_mmdetection" type="462c0819:PsiDirectoryNode" />
               <item name="data_annlyze" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="my_mmdetection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_mmdetection" type="462c0819:PsiDirectoryNode" />
-              <item name="mmdetection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_mmdetection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_mmdetection" type="462c0819:PsiDirectoryNode" />
-              <item name="mmdetection" type="462c0819:PsiDirectoryNode" />
-              <item name="mmdet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_mmdetection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_mmdetection" type="462c0819:PsiDirectoryNode" />
-              <item name="mmdetection" type="462c0819:PsiDirectoryNode" />
-              <item name="mmdet" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_mmdetection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_mmdetection" type="462c0819:PsiDirectoryNode" />
-              <item name="mmdetection" type="462c0819:PsiDirectoryNode" />
-              <item name="mmdet" type="462c0819:PsiDirectoryNode" />
-              <item name="datasets" type="462c0819:PsiDirectoryNode" />
-              <item name="pipelines" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -110,6 +169,9 @@
       </list>
     </option>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="31d0cb77-d2e7-41f7-a4ce-490808dbd1af" name="Default Changelist" comment="" />
@@ -117,12 +179,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591601201807</updated>
-      <workItem from="1591601204270" duration="242000" />
+      <workItem from="1591601204270" duration="2837000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242000" />
+    <option name="totallyTimeSpent" value="2837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
@@ -136,7 +198,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -157,10 +219,71 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/mmdetection/mmdet/datasets/pipelines/transforms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34925">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        <state relative-caret-position="500">
+          <caret line="2060" lean-forward="true" selection-start-line="2060" selection-end-line="2060" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_annlyze/data_analyze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_annlyze/data_distribute_analyze.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_annlyze/data_analyze_xml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-896">
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#18#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_annlyze/data_vis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_annlyze/img_compare.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_annlyze/test_.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_annlyze/inspect_res.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

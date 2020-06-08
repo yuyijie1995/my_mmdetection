@@ -1,6 +1,7 @@
 import cv2
 import json
 import os
+## 检查结果文件和真实标签的差异在哪里
 label='/home/wrc/Competition/mmdetection-master/val.json'
 img_path='/media/wrc/0EB90E450EB90E45/data/competition/coco/val2017'
 # model1_path='/home/wrc/Competition/mmdetection-master/res_submit_ensamble'

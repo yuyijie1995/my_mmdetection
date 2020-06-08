@@ -4,7 +4,10 @@ import numpy as np
 import json
 import matplotlib.pyplot as plt
 import copy
-
+### json训练集的分析
+### 统计大中小三类目标的数量
+### 统计目标长宽比
+### 给训练图片打标
 CLASSES = ['Consolidation', 'Fibrosis', 'Effusion', 'Nodule', 'Mass',
         'Emphysema', 'Calcification', 'Atelectasis', 'Fracture']
 # CLASSES = ['0', '1', '2', '3', '4',
@@ -94,27 +97,27 @@ with open(label) as f:
                 height=y2-y1
                 area=height*width
                 min_area=area if area<min_area else min_area
-                # statistic_obj_area(area)
-                # if height>width:
-                #     width,height=height,width#始终保证width大于height
-                # max_width_height=width/height if width/height>max_width_height else max_width_height
-                # min_width_height=width/height if width/height<min_width_height else min_width_height
-                # w_h_=width/height
-                # statistic_h_w_ratio(w_h_)
-                # if vis_img_flag:
-                #     cv2.rectangle(img, (x1, y1), (x2, y2), (0, 0, 255), 3)
-                #
-                #     cv2.putText(img, name, (x1 - 2, y1 - 2), cv2.FONT_HERSHEY_COMPLEX, 2, (0, 0, 255), 1)
-            # if o_big!=bbox_big:
-            #     img_inclu_big+=1
-            # if o_mid!=bbox_mid:
-            #     img_inclu_mid+=1
-            # if o_small!=bbox_small:
-            #     img_inclu_small+=1
+                statistic_obj_area(area)
+                if height>width:
+                    width,height=height,width#始终保证width大于height
+                max_width_height=width/height if width/height>max_width_height else max_width_height
+                min_width_height=width/height if width/height<min_width_height else min_width_height
+                w_h_=width/height
+                statistic_h_w_ratio(w_h_)
+                if vis_img_flag:
+                    cv2.rectangle(img, (x1, y1), (x2, y2), (0, 0, 255), 3)
+
+                    cv2.putText(img, name, (x1 - 2, y1 - 2), cv2.FONT_HERSHEY_COMPLEX, 2, (0, 0, 255), 1)
+            if o_big!=bbox_big:
+                img_inclu_big+=1
+            if o_mid!=bbox_mid:
+                img_inclu_mid+=1
+            if o_small!=bbox_small:
+                img_inclu_small+=1
         print('finished one')
-            # saved_name=os.path.join('./vised_imgs',g['file_name'])
-            # cv2.imwrite(saved_name,img)
-            # print('a file {} is completed!'.format(g['file_name']))
+        saved_name=os.path.join('./vised_imgs',g['file_name'])
+        cv2.imwrite(saved_name,img)
+        print('a file {} is completed!'.format(g['file_name']))
 print('min_area= ',min_area)
 print('w_h_ratio:')
 print(w_h_ratio)
@@ -122,19 +125,17 @@ print('包含各种大小目标的图片占比:')
 print((round(img_inclu_small/img_sum,2),round(img_inclu_mid/img_sum,2),round(img_inclu_big/img_sum,2)))
 print('大中小目标占比:')
 print((round(bbox_small/bbox_sum,2),round(bbox_mid/bbox_sum,2),round(bbox_big/bbox_sum,2)))
-# name_list=classes_count.keys()
-# class_count_new={
-# 'Consolidation':'0', 'Fibrosis':'1', 'Effusion':'2', 'Nodule':'3', 'Mass':'4',
-#         'Emphysema':'5', 'Calcification':'6', 'Atelectasis':'7', 'Fracture':'8'
-# }
-# val_list=classes_count.values()
-# name_new_list=[]
-# for name in name_list:
-#     name_new_list.append(class_count_new[name])
-# a=plt.bar(range(len(name_list)),val_list,tick_label=name_new_list)
-# autolabel(a)
-# plt.xticks(range(len(name_list)),name_list,rotation=30)
-# plt.savefig('class_analyze.png')
-# plt.show()
-### 统计大中小三类目标的数量
-### 统计目标长宽比
+name_list=classes_count.keys()
+class_count_new={
+'Consolidation':'0', 'Fibrosis':'1', 'Effusion':'2', 'Nodule':'3', 'Mass':'4',
+        'Emphysema':'5', 'Calcification':'6', 'Atelectasis':'7', 'Fracture':'8'
+}
+val_list=classes_count.values()
+name_new_list=[]
+for name in name_list:
+    name_new_list.append(class_count_new[name])
+a=plt.bar(range(len(name_list)),val_list,tick_label=name_new_list)
+autolabel(a)
+plt.xticks(range(len(name_list)),name_list,rotation=30)
+plt.savefig('class_analyze.png')
+plt.show()

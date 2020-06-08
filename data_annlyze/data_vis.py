@@ -9,7 +9,7 @@ import json
 import xml.etree.ElementTree as ET
 import cv2
 START_BOUNDING_BOX_ID = 1
-
+#xml训练文件可视化
 # If necessary, pre-define category and its id
 PRE_DEFINE_CATEGORIES = {
     'Consolidation': 1, 'Fibrosis': 2, 'Effusion': 3, 'Nodule': 4, 'Mass': 5,

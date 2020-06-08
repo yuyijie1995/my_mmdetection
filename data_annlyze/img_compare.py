@@ -1,6 +1,6 @@
 import PIL.Image as Image
 import os
-
+# 把多个图片拼接到一起对比
 IMAGES_PATH_gt = './vised_imgs'  # 图片集地址
 IMAGES_PATH_test = '/home/wrc/Competition/mmdetection-master/saved_images_submit_duck'  # 图片集地址
 IMAGES_FORMAT = ['.png']  # 图片格式

@@ -1,4 +1,4 @@
-#过滤duck出来的没有标签的数据
+#xml训练集的可视化
 import xml.etree.ElementTree as ET
 import os
 import matplotlib.pyplot as plt

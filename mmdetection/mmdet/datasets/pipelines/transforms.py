@@ -8,6 +8,7 @@ from PIL import Image
 from PIL import ImageDraw
 from mmdet.core.evaluation.bbox_overlaps import bbox_overlaps
 from ..registry import PIPELINES
+import cv2
 import pdb
 try:
     from imagecorruptions import corrupt
@@ -1876,3 +1877,184 @@ class GridMask(object):
             img = img * mask
         results['img']=img
         return results
+
+
+@PIPELINES.register_module
+class Mosaic(object):
+    def __init__(self,offset_x=0.4,offset_y=0.4,p=0.5):
+        self.offset_x=offset_x
+        self.offset_y=offset_y
+        self.flag = np.random.rand() < p
+    def __call__(self, results):
+        if self.flag:
+            h=results['img'][0].shape[0]
+            w=results['img'][0].shape[1]
+            iw,ih=w,h
+            scale_low = 1 - min(self.offset_x, self.offset_y)
+            scale_high = scale_low + 0.2
+            image_datas = []
+            box_datas = []
+            index = 0
+            place_x = [0, 0, int(w * self.offset_x), int(w * self.offset_x)]
+            place_y = [0, int(h * self.offset_y), int(w * self.offset_y), 0]
+            new_ar = w / h
+            scale = self.rand(scale_low, scale_high)
+            if new_ar < 1:
+                nh = int(scale * h)
+                nw = int(nh * new_ar)
+            else:
+                nw = int(scale * w)
+                nh = int(nw / new_ar)
+            for i in range(4):
+                results['img'][i] = cv2.resize(results['img'][i], (nw, nh), interpolation=cv2.INTER_CUBIC)
+                img=Image.fromarray(results['img'][i])
+
+                box_data = []
+                dx = place_x[index]
+                dy = place_y[index]
+                new_image = Image.new('RGB', (w, h), (128, 128, 128))
+                new_image.paste(img, (dx, dy))
+                image_data = np.array(new_image)
+                image_datas.append(image_data)
+                index = index + 1
+                if len(results['gt_bboxes'][i]) > 0:
+                    # np.random.shuffle(results['gt_bboxes'][i])
+                    box=results['gt_bboxes'][i]
+                    label=results['gt_labels'][i][:,np.newaxis]
+                    box=np.concatenate((box,label),axis=1)
+                    box[:, [0, 2]] = box[:, [0, 2]] * nw / iw + dx
+                    box[:, [1, 3]] = box[:, [1, 3]] * nh / ih + dy
+                    box[:, 0:2][box[:, 0:2] < 0] = 0
+                    box[:, 2][box[:, 2] > w] = w
+                    box[:, 3][box[:, 3] > h] = h
+                    box_w = box[:, 2] - box[:, 0]
+                    box_h = box[:, 3] - box[:, 1]
+                    box = box[np.logical_and(box_w > 1, box_h > 1)]
+                    box_data = np.zeros((len(box), 5))
+                    box_data[:len(box)] = box
+                box_datas.append(box_data)
+                # np.append()
+            cutx = np.random.randint(int(w * self.offset_x), int(w * (1 - self.offset_x)))
+            cuty = np.random.randint(int(h * self.offset_y), int(h * (1 - self.offset_y)))
+            new_image = np.zeros([h, w, 3])
+            new_image[:cuty, :cutx, :] = image_datas[0][:cuty, :cutx, :]
+            new_image[cuty:, :cutx, :] = image_datas[1][cuty:, :cutx, :]
+            new_image[cuty:, cutx:, :] = image_datas[2][cuty:, cutx:, :]
+            new_image[:cuty, cutx:, :] = image_datas[3][:cuty, cutx:, :]
+            new_boxes = self.merge_bboxes(box_datas, cutx, cuty)
+            bboxes=[box[:4] for box in new_boxes]
+            labels=[label[-1] for label in new_boxes]
+            if len(bboxes)==0:
+                results['img'] = results['img'][0]
+                results['gt_bboxes'] = results['gt_bboxes'][0]
+                results['gt_labels'] = results['gt_labels'][0]
+                return results
+            results['img']=new_image
+            results['gt_bboxes']=np.array(bboxes)
+            results['gt_labels']=np.array(labels)
+            return results
+        else:
+            results['img']=results['img'][0]
+            results['gt_bboxes']=results['gt_bboxes'][0]
+            results['gt_labels']=results['gt_labels'][0]
+            return results
+
+    def merge_bboxes(self,bboxes, cutx, cuty):
+        merge_bbox = []
+        for i in range(len(bboxes)):
+            for box in bboxes[i]:
+                tmp_box = []
+                x1, y1, x2, y2 = box[0], box[1], box[2], box[3]
+                if i == 0:
+                    if y1 > cuty or x1 > cutx:
+                        continue
+                    if y2 >= cuty and y1 <= cuty:
+                        y2 = cuty
+                        if y2 - y1 < 10:
+                            continue
+                    if x2 >= cutx and x1 <= cutx:
+                        x2 = cutx
+                        if x2 - x1 < 10:
+                            continue
+                if i == 1:
+                    if y2 < cuty or x1 > cutx:
+                        continue
+                    if y2 >= cuty and y1 <= cuty:
+                        y1 = cuty
+                        if y2 - y1 < 10:
+                            continue
+                    if x2 >= cutx and x1 <= cutx:
+                        x2 = cutx
+                        if x2 - x1 < 10:
+                            continue
+                if i == 2:
+                    if y2 < cuty or x2 < cutx:
+                        continue
+                    if y2 >= cuty and y1 <= cuty:
+                        y1 = cuty
+                        if y2 - y1 < 10:
+                            continue
+                    if x2 >= cutx and x1 <= cutx:
+                        x1 = cutx
+                        if x2 - x1 < 10:
+                            continue
+                if i == 3:
+                    if y1 > cuty or x2 < cutx:
+                        continue
+                    if y2 >= cuty and y1 <= cuty:
+                        y2 = cuty
+                        if y2 - y1 < 10:
+                            continue
+                    if x2 >= cutx and x1 <= cutx:
+                        x1 = cutx
+                        if x2 - x1 < 10:
+                            continue
+                tmp_box.append(x1)
+                tmp_box.append(y1)
+                tmp_box.append(x2)
+                tmp_box.append(y2)
+                tmp_box.append(box[-1])
+                merge_bbox.append(tmp_box)
+        return merge_bbox
+
+    def rand(self,a=0, b=1):
+        return np.random.rand() * (b - a) + a
+
+@PIPELINES.register_module
+class Minus(object):
+    """Concat two image.
+    Args:
+        template_path: template images path
+    """
+
+    def __init__(self, template_path):
+        self.template_path = template_path
+
+    def __call__(self, results):
+        if 'minus_img' not in results or results['minus_img'] is None:
+            # template_name = 'template_' + results['img_info']['filename'].split('_')[0] + '.jpg'
+            # template_im_name = self.template_path + results['img_info']['filename'].split('.')[0] + '/' + template_name
+            if '_'==results['img_info']['filename'][-6]:
+
+                template_im_name = self.template_path + results['img_info']['filename'][:-5] + '0.jpg'
+                img_temp = 0.2*mmcv.imread(template_im_name)
+                for i in range(1,5):
+                    template_im_name = self.template_path + results['img_info']['filename'][:-5] +str(i) + '.jpg'
+                    img_temp = img_temp + 0.2 * mmcv.imread(template_im_name)
+                # print(img_temp)
+            else:
+                template_im_name = self.template_path + results['img_info']['filename']
+                img_temp = mmcv.imread(template_im_name)
+            # print("ori",results['img_info']['filename'],"temp",template_im_name)
+            results['img'] = results['img']- img_temp
+            results['minus'] = True
+        else:
+            results['img'] = results['img']-results['minus_img']
+            results['minus'] = True
+        return results
+
+    def __repr__(self):
+        repr_str = self.__class__.__name__
+        repr_str += '(template_path={})'.format(
+            self.template_path)
+        return repr_str
