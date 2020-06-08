@@ -11,7 +11,7 @@ from sklearn import metrics as mr
 import shutil
 import sys
 from pycocotools.coco import COCO
-
+#通过coco文件制作xml文件
 random.seed(2019)
 CLASSES = ['Consolidation', 'Fibrosis', 'Effusion', 'Nodule', 'Mass',
         'Emphysema', 'Calcification', 'Atelectasis', 'Fracture']

@@ -10,7 +10,7 @@ IMAGE_SAVE_PATH='.'
 col=2
 row=2
 
-
+#mosaic数据拼接方法的效果验证
 
 img_info={}
 img_count=0

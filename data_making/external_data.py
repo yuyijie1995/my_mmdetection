@@ -3,6 +3,7 @@ import csv
 import numpy as np
 from PIL import Image
 import shutil
+#通过csv文件制作xml文件
 ann_path='/media/wrc/0EB90C850EB90C85/Data_Entry_2017_v2020.csv'
 image_path='/media/wrc/0EB90C850EB90C85/images'
 CLASSES = ['Consolidation', 'Fibrosis', 'Effusion', 'Nodule', 'Mass',

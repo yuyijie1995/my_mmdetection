@@ -5,7 +5,7 @@ import json
 import matplotlib.pyplot as plt
 import xml.etree.ElementTree as ET
 
-
+#通过xml文件制作json文件
 CLASSES = ['Consolidation', 'Fibrosis', 'Effusion', 'Nodule', 'Mass',
         'Emphysema', 'Calcification', 'Atelectasis', 'Fracture']
 

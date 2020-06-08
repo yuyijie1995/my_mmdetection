@@ -8,7 +8,7 @@ import os
 import json
 import xml.etree.ElementTree as ET
 
-
+#voc2coco
 START_BOUNDING_BOX_ID = 1
 
 # If necessary, pre-define category and its id

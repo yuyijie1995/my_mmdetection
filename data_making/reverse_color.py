@@ -1,6 +1,6 @@
 import cv2
 import os
-# opencv读取图像
+# opencv读取图像 颜色取反
 img_path='/media/wrc/0EB90E450EB90E45/data/competition/coco/train2017'
 dst_path='/media/wrc/0EB90E450EB90E45/data/competition/coco/train2017_reverse'
 img_lists=os.listdir(img_path)

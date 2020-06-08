@@ -7,7 +7,7 @@ import sys
 import os
 import shutil
 
-
+#按照voc中的trainval文件把coco的图片进行分割
 split_list = ['train', 'val', 'test']
 
 

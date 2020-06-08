@@ -8,8 +8,8 @@ import random
 from PIL import Image
 import time
 from sklearn import metrics as mr
-import shutil
-import sys
+
+# 通过json文件制作填鸭xml文件
 random.seed(2019)
 CLASSES = ['Consolidation', 'Fibrosis', 'Effusion', 'Nodule', 'Mass',
         'Emphysema', 'Calcification', 'Atelectasis', 'Fracture']
@@ -81,7 +81,6 @@ with open(label) as f:
                 RGBA_num+=1
                 patch2=patch2.convert('RGB')
                 patch2=patch2.convert('L')
-            # print('bbox:', (left_top_x, left_top_y, int(left_top_x + (x2 - x1)), int(left_top_y + (y2 - y1))))
             pat1=patch1.copy()
             pat2=patch2.copy()
             patch1 = np.resize(patch1, -1)
@@ -100,7 +99,6 @@ with open(label) as f:
                 im_template = Image.fromarray(cv2.cvtColor(im_template, cv2.COLOR_BGR2RGB))
 
                 xml_file.write('    <object>\n')
-                # spt[0] = 'helmet'
                 xml_file.write('        <name>' + name + '</name>\n')
                 xml_file.write('        <pose>Unspecified</pose>\n')
                 xml_file.write('        <truncated>0</truncated>\n')

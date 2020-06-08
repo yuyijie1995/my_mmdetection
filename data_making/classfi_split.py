@@ -1,12 +1,10 @@
-# create_train_test_txt.py
-# encoding:utf-8
 import pdb
 import glob
 import os
 import random
 import math
 import shutil
-
+# 把分类数据集分割
 img0_list_path = os.listdir('/media/wrc/0EB90E450EB90E45/data/competition/classification2/0')
 img1_list_path = os.listdir('/media/wrc/0EB90E450EB90E45/data/competition/classification2/1')
 

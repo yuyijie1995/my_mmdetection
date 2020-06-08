@@ -16,7 +16,7 @@ for item in txt_list_path:
     txt_list.append(temp1)
 txt_list.sort()
 print(txt_list, end='\n\n')
-
+### 制作交叉验证集
 ### 均匀划分
 #
 # num_trainval1 = random.sample(txt_list, math.floor(len(txt_list) * 1/ 10.0))

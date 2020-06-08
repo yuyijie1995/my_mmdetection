@@ -5,7 +5,7 @@ import json
 import matplotlib.pyplot as plt
 from PIL import Image
 
-
+#json2voc
 CLASSES = ['Consolidation', 'Fibrosis', 'Effusion', 'Nodule', 'Mass',
         'Emphysema', 'Calcification', 'Atelectasis', 'Fracture']
 # CLASSES = ['0', '1', '2', '3', '4',
