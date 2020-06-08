@@ -17,4 +17,11 @@ my_custom_mmdetection
 ### data_make & data_analysis
 - [x] data2voc and data2coco
 - [x] duck injucktion
+### data_analysis
+- [x] 可视化json
+- [x] 可视化xml
+- [x] 可视化每个类别的位置分布
+- [x] 计算长宽比，大中小目标数量分布，各个类别数量分布
+- [x] 把多个结果图片拼接起来对比
+- [x] 多个结果文件的bbox打到一张图上和gt对比
 
