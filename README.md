@@ -15,8 +15,11 @@ my_custom_mmdetection
 - [x] global roi 
 - [ ] atss_Rcnn(代码可能有问题)
 ### data_make & data_analysis
-- [x] data2voc and data2coco
+- [x] json2voc and voc2coco
 - [x] duck injucktion
+- [x] make_gt_json
+- [x] 反色数据
+- [x] 训练验证集分割
 ### data_analysis
 - [x] 可视化json
 - [x] 可视化xml
