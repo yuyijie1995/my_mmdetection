@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31d0cb77-d2e7-41f7-a4ce-490808dbd1af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mmdetection/visualize_validata_txt_data_fpfnap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -35,6 +34,7 @@
       <change beforePath="$PROJECT_DIR$/mmdetection/mmdet/models/losses/Giou_loss.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdetection/mmdet/models/losses/Giou_loss.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mmdetection/mmdet/models/losses/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdetection/mmdet/models/losses/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mmdetection/mmdet/models/losses/myrepulsion.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdetection/mmdet/models/losses/myrepulsion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmdetection/visualize_validata_txt_data_fpfnap.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdetection/visualize_validata_txt_data_fpfnap.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +206,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../upload/biye" />
+    <property name="last_opened_file_path" value="E:/softensemble" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -239,16 +239,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591601201807</updated>
-      <workItem from="1591601204270" duration="6055000" />
+      <workItem from="1591601204270" duration="6652000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6055000" />
+    <option name="totallyTimeSpent" value="6652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983256" />
