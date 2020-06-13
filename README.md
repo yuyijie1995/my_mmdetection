@@ -16,12 +16,13 @@ my_custom_mmdetection
 - [ ] atss_Rcnn(代码可能有问题)
 - [x] repulsion loss
 - [ ] diou loss & ciou loss （需要进一步修改，指标偏低）
-### data_make & data_analysis
+### data_make 
 - [x] json2voc and voc2coco
 - [x] duck injucktion
 - [x] make_gt_json
 - [x] 反色数据
 - [x] 训练验证集分割
+
 ### data_analysis
 - [x] 可视化json
 - [x] 可视化xml
@@ -29,4 +30,8 @@ my_custom_mmdetection
 - [x] 计算长宽比，大中小目标数量分布，各个类别数量分布
 - [x] 把多个结果图片拼接起来对比
 - [x] 多个结果文件的bbox打到一张图上和gt对比
+- [x] 结果fp和fn的可视化
+### 模型融合
+- [x] 加权平均
+- [x] 软加权平均
 
