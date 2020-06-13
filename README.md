@@ -16,6 +16,7 @@ my_custom_mmdetection
 - [ ] atss_Rcnn(代码可能有问题)
 - [x] repulsion loss
 - [ ] diou loss & ciou loss （需要进一步修改，指标偏低）
+- [x] senet 
 ### data_make 
 - [x] json2voc and voc2coco
 - [x] duck injucktion
