@@ -35,6 +35,7 @@
       <change beforePath="$PROJECT_DIR$/mmdetection/mmdet/models/losses/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdetection/mmdet/models/losses/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mmdetection/mmdet/models/losses/myrepulsion.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdetection/mmdet/models/losses/myrepulsion.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mmdetection/visualize_validata_txt_data_fpfnap.py" beforeDir="false" afterPath="$PROJECT_DIR$/mmdetection/visualize_validata_txt_data_fpfnap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_ensemble/ensemble-objdet-master/soft_merge_ccf.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_ensemble/ensemble-objdet-master/soft_merge_ccf.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,15 +45,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_making/train_val_split.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_making/voc2coco.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/mmdetection/mmdet/models/detectors/two_stage.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -104,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/mmdetection/mmdet/models/losses/Giou_loss.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
-              <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -113,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/mmdetection/mmdet/models/losses/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+              <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -121,11 +113,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mmdetection/visualize_validata_txt_data_fpfnap.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/model_ensemble/ensemble-objdet-master/soft_merge_ccf.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,6 +164,7 @@
         <option value="$PROJECT_DIR$/mmdetection/mmdet/models/detectors/two_stage.py" />
         <option value="$PROJECT_DIR$/mmdetection/mmdet/models/losses/__init__.py" />
         <option value="$PROJECT_DIR$/mmdetection/visualize_validata_txt_data_fpfnap.py" />
+        <option value="$PROJECT_DIR$/model_ensemble/ensemble-objdet-master/soft_merge_ccf.py" />
       </list>
     </option>
   </component>
@@ -184,18 +189,20 @@
             <path>
               <item name="my_mmdetection" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_mmdetection" type="462c0819:PsiDirectoryNode" />
-              <item name="mmdetection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_mmdetection" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_mmdetection" type="462c0819:PsiDirectoryNode" />
-              <item name="mmdetection" type="462c0819:PsiDirectoryNode" />
-              <item name="visualize_validata_txt_data_fpfnap.py" type="8704e2dd:PyFileNode" />
+              <item name="model_ensemble" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="my_mmdetection" type="b2602c69:ProjectViewProjectNode" />
               <item name="my_mmdetection" type="462c0819:PsiDirectoryNode" />
               <item name="model_ensemble" type="462c0819:PsiDirectoryNode" />
+              <item name="ensemble-objdet-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="my_mmdetection" type="b2602c69:ProjectViewProjectNode" />
+              <item name="my_mmdetection" type="462c0819:PsiDirectoryNode" />
+              <item name="model_ensemble" type="462c0819:PsiDirectoryNode" />
+              <item name="ensemble-objdet-master" type="462c0819:PsiDirectoryNode" />
+              <item name="soft_merge_ccf.py" type="8704e2dd:PyFileNode" />
             </path>
           </expand>
           <select />
@@ -206,12 +213,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/softensemble" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../upload/tianchi_chongqin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user1\Documents\my_mmdetection\model_ensemble\ensemble-objdet-master" />
       <recent name="C:\Users\user1\Documents\my_mmdetection\mmdetection" />
       <recent name="C:\Users\user1\Documents\my_mmdetection\mmdetection\mmdet\models\losses" />
       <recent name="C:\Users\user1\Documents\my_mmdetection\mmdetection\configs\FeiYan" />
@@ -239,15 +247,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591601201807</updated>
-      <workItem from="1591601204270" duration="6652000" />
+      <workItem from="1591601204270" duration="7055000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6652000" />
+    <option name="totallyTimeSpent" value="7055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983256" />
@@ -490,7 +499,7 @@
     <entry file="file://$PROJECT_DIR$/mmdetection/mmdet/models/detectors/two_stage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -513,7 +522,7 @@
     <entry file="file://$PROJECT_DIR$/mmdetection/mmdet/models/losses/Giou_loss.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -525,7 +534,7 @@
     <entry file="file://$PROJECT_DIR$/mmdetection/mmdet/models/losses/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -535,7 +544,17 @@
     <entry file="file://$PROJECT_DIR$/mmdetection/visualize_validata_txt_data_fpfnap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model_ensemble/ensemble-objdet-master/soft_merge_ccf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
