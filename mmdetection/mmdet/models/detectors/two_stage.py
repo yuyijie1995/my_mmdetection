@@ -216,8 +216,15 @@ class TwoStageDetector(BaseDetector, RPNTestMixin, BBoxTestMixin,
             bbox_targets = self.bbox_head.get_target(sampling_results,
                                                      gt_bboxes, gt_labels,
                                                      self.train_cfg.rcnn)
-            loss_bbox = self.bbox_head.loss(cls_score, bbox_pred,
-                                            *bbox_targets)
+            pos_gt_bboxes=[res.pos_gt_bboxes for res in sampling_results]
+            pos_proposals=[res.pos_bboxes for res in sampling_results]
+            pos_proposals_=torch.cat(pos_proposals,0)
+            pos_gt_bboxes_=torch.cat(pos_gt_bboxes,0)
+            if self.train_cfg['loss']=='repulsion':
+                loss_bbox=self.bbox_head.loss_roi(cls_score,bbox_pred,pos_proposals_,pos_gt_bboxes_,*bbox_targets)
+            else:
+                loss_bbox = self.bbox_head.loss(cls_score, bbox_pred,
+                                                *bbox_targets)
             losses.update(loss_bbox)
         # wandb.log({'loss':losses})
         # mask head forward and loss
